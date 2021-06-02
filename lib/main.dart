@@ -1,5 +1,6 @@
 import 'package:btaxi/screens/login_screen.dart';
 import 'package:btaxi/screens/main_screen.dart';
+import 'package:btaxi/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: login_screen(),
+      home: signup_screen(),
       debugShowCheckedModeBanner: false,
     );
   }
