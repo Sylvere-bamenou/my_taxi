@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "828968889335",
+    "project_id": "mytaxi-6274e",
+    "storage_bucket": "mytaxi-6274e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828968889335:android:1665e54a69ac314e87dcf2",
+        "android_client_info": {
+          "package_name": "com.globalconsulting.btaxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828968889335-8i6dc7shc1a6697e2670sud61nhcop7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBww_NOAz3-BCF_HD4ar6g3-ihaFxZcnEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828968889335-8i6dc7shc1a6697e2670sud61nhcop7v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
