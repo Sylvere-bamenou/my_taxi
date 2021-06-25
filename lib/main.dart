@@ -8,7 +8,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +17,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: signup_screen(),
+      initialRoute: login_screen.idScreen,
+      routes: {
+        signup_screen.idScreen:(context) => signup_screen(),
+        login_screen.idScreen:(context) => login_screen(),
+        Main_screen.idScreen:(context) => Main_screen(),
+      },
       debugShowCheckedModeBanner: false,
     );
   }

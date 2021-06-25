@@ -1,10 +1,10 @@
+import 'package:btaxi/screens/signup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class login_screen extends StatelessWidget {
-  const login_screen({Key key}) : super(key: key);
-
+  static const String idScreen = "login";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,9 +14,9 @@ class login_screen extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              SizedBox(height: 30.0,),
+              SizedBox(height: 10.0,),
               Image(
-                image: AssetImage("assets/images/logo.png"),
+                image: AssetImage("assets/images/logo1.png"),
                 width: 300.0,
                 height: 300.0,
                 alignment: Alignment.center,
@@ -34,6 +34,7 @@ class login_screen extends StatelessWidget {
                   children: [
                     SizedBox(height: 1.0,),
                     TextField(
+                      key: UniqueKey(),
                       keyboardType: TextInputType.emailAddress,
                       decoration:InputDecoration(
                         labelText: "Email",
@@ -48,6 +49,7 @@ class login_screen extends StatelessWidget {
                       style: TextStyle(fontSize: 14.0),
                     ),
                     TextField(
+                      key: UniqueKey(),
                       obscureText: true,
                       decoration:InputDecoration(
                         labelText: "Mot de passe",
@@ -63,7 +65,7 @@ class login_screen extends StatelessWidget {
                     ),
                     SizedBox(height: 15.0,),
                     RaisedButton(
-                      color: Colors.yellow[600],
+                      color: Colors.black,
                       textColor: Colors.white,
                       child: Container(
                         height: 50.0,
@@ -86,7 +88,7 @@ class login_screen extends StatelessWidget {
               ),
               FlatButton(
                 onPressed: (){
-                  print("Clicked");
+                  Navigator.pushNamedAndRemoveUntil(context, signup_screen.idScreen, (route) => false);
                 },
                 child: Text(
                     "Vous n'avez pas de compte ? Inscrivez-vous",

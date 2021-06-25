@@ -1,0 +1,4 @@
+#Fri Jun 25 09:48:56 WAT 2021
+base.0=/home/kitra/Documents/onsideprojects/my_taxi/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

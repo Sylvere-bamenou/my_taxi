@@ -1,9 +1,16 @@
+import 'package:btaxi/screens/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class signup_screen extends StatelessWidget {
-  const signup_screen({Key key}) : super(key: key);
+  static const String idScreen = "signup";
+
+  //Variables contenant les données du formulaire
+  TextEditingController name_on_signup = TextEditingController();
+  TextEditingController mail_on_signup = TextEditingController();
+  TextEditingController phone_on_signup = TextEditingController();
+  TextEditingController pass_on_signup = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +23,12 @@ class signup_screen extends StatelessWidget {
             children: [
               SizedBox(height: 10.0,),
               Image(
-                image: AssetImage("assets/images/logo.png"),
+                image: AssetImage("assets/images/logo1.png"),
                 width: 300.0,
-                height: 300.0,
+                height: 250.0,
                 alignment: Alignment.center,
               ),
-              SizedBox(height: 1.0,),
+              SizedBox(height: 2.0,),
               Text(
                 "Inscription",
                 style: TextStyle(fontSize: 24.0, fontFamily: "brand-bold"),
@@ -34,6 +41,7 @@ class signup_screen extends StatelessWidget {
                   children: [
                     SizedBox(height: 1.0,),
                     TextField(
+                      controller: name_on_signup, //récupérer les noms des inscris
                       keyboardType: TextInputType.text,
                       decoration:InputDecoration(
                         labelText: "Nom & prénoms",
@@ -48,6 +56,7 @@ class signup_screen extends StatelessWidget {
                       style: TextStyle(fontSize: 14.0),
                     ),
                     TextField(
+                      controller: mail_on_signup,//récupérer les valeurs de mails
                       keyboardType: TextInputType.emailAddress,
                       decoration:InputDecoration(
                         labelText: "Email",
@@ -62,6 +71,7 @@ class signup_screen extends StatelessWidget {
                       style: TextStyle(fontSize: 14.0),
                     ),
                     TextField(
+                      controller: phone_on_signup, // récupérer numero de telephone
                       keyboardType: TextInputType.phone,
                       decoration:InputDecoration(
                         labelText: "Téléphone",
@@ -76,6 +86,7 @@ class signup_screen extends StatelessWidget {
                       style: TextStyle(fontSize: 14.0),
                     ),
                     TextField(
+                      controller: pass_on_signup,//récupérer mot de passe
                       obscureText: true,
                       decoration:InputDecoration(
                         labelText: "Mot de passe",
@@ -89,23 +100,9 @@ class signup_screen extends StatelessWidget {
                       ),
                       style: TextStyle(fontSize: 14.0),
                     ),
-                    TextField(
-                      obscureText: true,
-                      decoration:InputDecoration(
-                        labelText: "Confirmer Mot de passe",
-                        labelStyle: TextStyle(
-                          fontSize: 16.0,
-                        ),
-                        hintStyle: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 12.0,
-                        ),
-                      ),
-                      style: TextStyle(fontSize: 14.0),
-                    ),
                     SizedBox(height: 10.0,),
                     RaisedButton(
-                      color: Colors.yellow[600],
+                      color: Colors.black,
                       textColor: Colors.white,
                       child: Container(
                         height: 50.0,
@@ -128,8 +125,8 @@ class signup_screen extends StatelessWidget {
               ),
               FlatButton(
                 onPressed: (){
-                  print("Clicked");
-                },
+                  Navigator.pushNamedAndRemoveUntil(context, login_screen.idScreen, (route) => false);
+                  },
                 child: Text(
                   "Vous avez un compte ? Connectez-vous",
 
